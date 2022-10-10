@@ -23,9 +23,10 @@ port = args.configuration[1]
 server = smtplib.SMTP(host,port)
 
 #Creating email body 
+msg = MIMEText(message)
 msg['From'] = sender
 msg['To'] = ", ".join(recipients)
-msg = MIMEText(message)
+
 
 #Sending emails
 server.sendmail(sender, recipients, msg.as_string())    
