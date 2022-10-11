@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                bat 'python sendEmail.py -s "sender@domain.com" -r "papercut@user.com" "papercut1@user.com" -m "Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET--Test from Jenkings" -c "localhost" 25'           
+                bat 'python sendEmail.py -s "no-reply-sre@test.com" -r  "John.smith@test.com" "rodger.more@test.com" "papercut@user.com" -m "Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET" -c "localhost" 25'           
                 }
         }
     }
