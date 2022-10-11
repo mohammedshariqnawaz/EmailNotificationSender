@@ -21,7 +21,7 @@ Step 3: Scroll down to the pipeline and check 'Build Periodically' under Build T
 
 ![Screenshot](screenshots/step3.png)
 
-Step 4: Choose ‘pipeline script from SCM’ under Pipeline and paste [repository link](https://github.com/mohammedshariqnawaz/EmailNotificationSender.git) under 'Repository URL'. Type ```*/main``` as 'Branch Specifier' and ```JenkinsFile``` as 'Script Path'
+Step 4: Choose ‘pipeline script from SCM’ under Pipeline and select 'Git' and paste [repository link](https://github.com/mohammedshariqnawaz/EmailNotificationSender.git) ```https://github.com/mohammedshariqnawaz/EmailNotificationSender``` under 'Repository URL'. Type ```*/main``` as 'Branch Specifier' and ```JenkinsFile``` as 'Script Path'
  and click 'Save'. Enter your desired arguments in line 16 of [JenkinsFile](https://github.com/mohammedshariqnawaz/EmailNotificationSender/blob/main/JenkinsFile).
 
 Note:- ```-s``` denotes sender address.
