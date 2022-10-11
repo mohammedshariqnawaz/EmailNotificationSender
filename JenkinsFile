@@ -1,0 +1,20 @@
+// Build Periodically - H 9 * * 6
+// To run on Saturday morning every week
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mohammedshariqnawaz/EmailNotificationSender.git']]])            
+                
+            }
+        }
+        stage('Build') {
+            steps {
+                
+                bat 'python sendEmail.py -s "sender@domain.com" -r "papercut@user.com" "papercut1@user.com" -m "Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET--Test from Jenkings" -c "localhost" 25'           
+                }
+        }
+    }
+}
