@@ -21,8 +21,8 @@ Step 3: Scroll down to the pipeline and check 'Build Periodically' under Build T
 
 ![Screenshot](screenshots/step3.png)
 
-Step 4: Choose ‘pipeline script’ under Pipeline and copy/paste contents from [JenkinsFile](https://github.com/mohammedshariqnawaz/EmailNotificationSender/blob/main/JenkinsFile)
- and click 'Save'. Enter your desired arguments in line 16.
+Step 4: Choose ‘pipeline script from SCAM’ under Pipeline and paste [repository link](https://github.com/mohammedshariqnawaz/EmailNotificationSender.git) under 'Repository URL'. Type ```*/main``` as 'Branch Specifier' and ```JenkinsFile``` as 'Script Path'
+ and click 'Save'. Enter your desired arguments in line 16 of [JenkinsFile](https://github.com/mohammedshariqnawaz/EmailNotificationSender/blob/main/JenkinsFile).
 
 Note:- ```-s``` denotes sender address.
 
@@ -32,9 +32,11 @@ Note:- ```-s``` denotes sender address.
 
 ```-c``` denotes configuration(host followed by port number).
 
-Eg:-```python sendEmail.py -s "sender@domain.com" -r "papercut@user.com" "papercut1@user.com" -m "Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET--Test from Jenkings" -c "localhost" 25```
+Eg:-```python sendEmail.py -s "no-reply-sre@test.com" -r  "John.smith@test.com" "rodger.more@test.com" "papercut@user.com" -m "Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET" -c "localhost" 25'```
 
 ![Screenshot](screenshots/step4.png)
+
+![Screenshot](screenshots/step4a.png)
 
 Step 5: Once the Jenkins Project Dashboard is loaded, click 'Build Now' to build the pipeline.
 
